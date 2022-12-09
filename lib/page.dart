@@ -65,7 +65,7 @@ class HomepageState extends State<Homepage> {
           ),
           Expanded(
             child: WebView(
-              initialUrl: 'https://app.seversoftech.com/',
+              initialUrl: 'https://url/',
               javascriptMode: JavascriptMode.unrestricted,
               onWebViewCreated: (WebViewController webViewController) {
                 _controllerCompleter.future
