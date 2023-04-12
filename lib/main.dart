@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'dependency_injection.dart';
 import 'navbar.dart';
 
 void main() {
@@ -9,13 +11,13 @@ void main() {
         statusBarIconBrightness: Brightness.dark),
   );
 
-  runApp(MyApp());
+  runApp(MyApp()); DependencyInjection.init();
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Seversoft Tech',
       theme: ThemeData(),
@@ -23,3 +25,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
