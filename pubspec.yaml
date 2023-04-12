@@ -25,6 +25,7 @@ dependencies:
   connectivity_plus: ^2.3.0
   get: ^4.6.5
   flutter_svg:
+  firebase_core: ^2.9.0
   
 
 

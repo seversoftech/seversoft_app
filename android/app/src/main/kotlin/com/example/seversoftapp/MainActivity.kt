@@ -1,4 +1,4 @@
-package com.example.seversoftapp
+package  com.seversoft.app
 
 import io.flutter.embedding.android.FlutterActivity
 

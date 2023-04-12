@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.seversoftapp">
+    package=" com.seversoft.app">
    <application
         android:label="Seversoft Tech"
         android:name="${applicationName}"
