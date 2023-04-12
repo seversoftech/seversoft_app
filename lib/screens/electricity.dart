@@ -103,12 +103,6 @@ class ElectricityState extends State<Electricity> {
     }
   }
 
-// RELOAD WEBVIEW
-  reloadWebView() {
-    _controller.reload();
-    SnackTest.show(context, 'Reloading...');
-  }
-
 // LOAD ERROR HTML PAGE
   _loadHtmlFromAssets() async {
     String fileText = await rootBundle.loadString('assets/error.html');
@@ -117,33 +111,5 @@ class ElectricityState extends State<Electricity> {
       mimeType: 'text/html',
       encoding: Encoding.getByName('utf-8'),
     ).toString());
-  }
-}
-
-// SNACKBAR TEXT CLASS
-class SnackTest {
-  final String message;
-
-  const SnackTest({required this.message});
-
-  static show(
-    BuildContext context,
-    String message,
-  ) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        elevation: 5,
-        //behavior: SnacBarBehavior.floating,
-        content: Text(message),
-        duration: new Duration(seconds: 2),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20.0),
-            topRight: Radius.circular(20.0),
-          ),
-        ),
-        backgroundColor: Color.fromARGB(225, 79, 70, 229),
-      ),
-    );
   }
 }
