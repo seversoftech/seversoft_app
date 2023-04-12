@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "799071269662",
+    "project_id": "seversoft-app",
+    "storage_bucket": "seversoft-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799071269662:android:b9ab095c05b50ca7b68f0f",
+        "android_client_info": {
+          "package_name": "com.example.seversoftapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799071269662-fjdp2m7s7qq8soqok0j3fer9hvig9jn1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMxOasU_IejlMbWuaA62Kh9_p4U-PFElI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799071269662-fjdp2m7s7qq8soqok0j3fer9hvig9jn1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "799071269662-2skbav5ubc2oj7dmtirhag4km74lf7jh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.seversoftapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799071269662:android:e99bb1273ab17f82b68f0f",
+        "android_client_info": {
+          "package_name": "com.seversoft.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799071269662-fjdp2m7s7qq8soqok0j3fer9hvig9jn1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMxOasU_IejlMbWuaA62Kh9_p4U-PFElI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799071269662-fjdp2m7s7qq8soqok0j3fer9hvig9jn1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "799071269662-2skbav5ubc2oj7dmtirhag4km74lf7jh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.seversoftapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

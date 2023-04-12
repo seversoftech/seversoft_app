@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>799071269662-f1q2iul90umko71vu0f8vbucrkp2bmuj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.799071269662-f1q2iul90umko71vu0f8vbucrkp2bmuj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCAMQowDw8F6X3z7JfRtTyKQzs4eodtpOU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>799071269662</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.seversoft.app</string>
+	<key>PROJECT_ID</key>
+	<string>seversoft-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>seversoft-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:799071269662:ios:e4a77f6fa45a9a6eb68f0f</string>
+</dict>
+</plist>
