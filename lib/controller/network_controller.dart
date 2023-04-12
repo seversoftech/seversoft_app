@@ -1,5 +1,6 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class NetworkController extends GetxController {
@@ -14,26 +15,30 @@ class NetworkController extends GetxController {
   void _updateConnectionStatus(ConnectivityResult connectivityResult) {
     if (connectivityResult == ConnectivityResult.none) {
       Get.rawSnackbar(
+          snackPosition: SnackPosition.TOP,
           titleText: Text(
             ' Cannot connect to network.',
+            textAlign: TextAlign.center,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 20,
+                fontSize: 30,
                 color: Color(0xFF090735)),
           ),
           messageText: const Text(
               'There was an error connecting to the network. Please check your internet connection and try again. If the problem persists, please contact your network administrator for assistance.',
-              style: TextStyle(color: Colors.white, fontSize: 14)),
+              style: TextStyle(color: Colors.white, fontSize: 24)),
           isDismissible: false,
           duration: const Duration(days: 1),
-          backgroundColor: Color.fromARGB(255, 161, 13, 10)!,
-          icon: const Icon(
-            Icons.settings_input_antenna,
-            color: Colors.white,
-            size: 35,
+          backgroundColor: Color.fromARGB(255, 192, 13, 10),
+          icon: SvgPicture.asset(
+            'assets/icons/no_signal.svg',
+            height: 500,
+            width: 500,
+            allowDrawingOutsideViewBox: true,
           ),
           margin: EdgeInsets.zero,
-          snackStyle: SnackStyle.GROUNDED);
+          snackStyle: SnackStyle.GROUNDED,
+          mainButton: ElevatedButton(onPressed: () {}, child: Text('Retry')));
     } else {
       if (Get.isSnackbarOpen) {
         Get.closeCurrentSnackbar();
