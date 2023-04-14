@@ -29,13 +29,13 @@ class NetworkController extends GetxController {
               style: TextStyle(color: Colors.white, fontSize: 24)),
           isDismissible: false,
           duration: const Duration(days: 1),
-          backgroundColor: Color.fromARGB(255, 192, 13, 10),
-          icon: SvgPicture.asset(
-            'assets/icons/no_signal.svg',
-            height: 500,
-            width: 500,
-            allowDrawingOutsideViewBox: true,
-          ),
+          backgroundColor: Color.fromARGB(255, 230, 15, 8),
+          // icon: SvgPicture.asset(
+          //   'assets/icons/no_signal.svg',
+          //   height: 500,
+          //   width: 500,
+          //   allowDrawingOutsideViewBox: true,
+          // ),
           margin: EdgeInsets.zero,
           snackStyle: SnackStyle.GROUNDED,
           mainButton: ElevatedButton(onPressed: () {}, child: Text('Retry')));
