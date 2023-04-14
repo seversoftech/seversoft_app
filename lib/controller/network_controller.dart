@@ -1,6 +1,6 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:full_screen_image/full_screen_image.dart';
 import 'package:get/get.dart';
 
 class NetworkController extends GetxController {
@@ -16,13 +16,16 @@ class NetworkController extends GetxController {
     if (connectivityResult == ConnectivityResult.none) {
       Get.rawSnackbar(
         snackPosition: SnackPosition.TOP,
-        titleText: Text(
-          ' Cannot connect to network.',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 14,
-              color: Color(0xFF090735)),
+        titleText: FullScreenWidget(
+          disposeLevel: DisposeLevel.High,
+          child: Text(
+            ' Cannot connect to network.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 14,
+                color: Color(0xFF090735)),
+          ),
         ),
         messageText: const Text(
             'There was an error connecting to the network. Please check your internet connection and try again. If the problem persists, please contact your network administrator for assistance.',
