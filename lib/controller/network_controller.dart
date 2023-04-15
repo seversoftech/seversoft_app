@@ -24,12 +24,14 @@ class NetworkController extends GetxController {
             'There was an error connecting to the network. Please check your internet connection and try again. If the problem persists, please contact your network administrator for assistance.',
             textAlign: TextAlign.center,
             style: TextStyle(
-                color: Color.fromARGB(255, 3, 19, 109), fontSize: 20)),
+                color: Color.fromARGB(255, 3, 19, 109),
+                fontSize: 14,
+                fontWeight: FontWeight.bold)),
         isDismissible: false,
         duration: const Duration(days: 1),
         backgroundColor: Colors.white,
         margin: EdgeInsets.zero,
-        snackStyle: SnackStyle.GROUNDED,
+        snackStyle: SnackStyle.FLOATING,
       );
     } else {
       if (Get.isSnackbarOpen) {
