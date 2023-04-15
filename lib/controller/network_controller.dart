@@ -23,10 +23,11 @@ class NetworkController extends GetxController {
         ),
         messageText: const Text(
             'There was an error connecting to the network. Please check your internet connection and try again. If the problem persists, please contact your network administrator for assistance.',
-            style: TextStyle(color: Colors.white, fontSize: 20)),
+            style: TextStyle(
+                color: Color.fromARGB(255, 3, 19, 109), fontSize: 20)),
         isDismissible: false,
         duration: const Duration(days: 1),
-        backgroundColor: Color.fromARGB(255, 230, 15, 8),
+        backgroundColor: Colors.white,
         margin: EdgeInsets.zero,
         snackStyle: SnackStyle.GROUNDED,
       );
