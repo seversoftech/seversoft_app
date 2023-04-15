@@ -18,13 +18,22 @@ class NetworkController extends GetxController {
         snackPosition: SnackPosition.TOP,
         titleText: FullScreenWidget(
           disposeLevel: DisposeLevel.High,
-          child: Text(
-            ' Cannot connect to network.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-                color: Color(0xFF090735)),
+          child: Column(
+            children: [
+              Text(
+                ' Cannot connect to network.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                    color: Color(0xFF090735)),
+              ),       icon: SvgPicture.asset(
+         'assets/icons/no_signal.svg',
+        //  height: 500,
+        //   width: 500,
+         allowDrawingOutsideViewBox: true,
+      ),
+            ],
           ),
         ),
         messageText: const Text(
