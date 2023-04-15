@@ -19,10 +19,10 @@ class NetworkController extends GetxController {
         titleText: SvgPicture.asset(
           'assets/icons/no_signal.svg',
           allowDrawingOutsideViewBox: false,
-          height: 400,
         ),
         messageText: const Text(
             'There was an error connecting to the network. Please check your internet connection and try again. If the problem persists, please contact your network administrator for assistance.',
+            textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromARGB(255, 3, 19, 109), fontSize: 20)),
         isDismissible: false,
