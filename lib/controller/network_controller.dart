@@ -18,28 +18,33 @@ class NetworkController extends GetxController {
       Get.rawSnackbar(
         snackPosition: SnackPosition.TOP,
         titleText: FullScreenWidget(
-          disposeLevel: DisposeLevel.High,
-          child: Column(
-            children: [
-              Text(
-                ' Cannot connect to network.',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Color(0xFF090735)),
-              ),       SvgPicture.asset(
-         'assets/icons/no_signal.svg',
-        //  height: 500,
-        //   width: 500,
-         allowDrawingOutsideViewBox: true,
-      ),
-            ],
+          disposeLevel: DisposeLevel.Low,
+          child: Expanded(
+            flex: 1,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                // Text(
+                //   ' Cannot connect to network.',
+                //   textAlign: TextAlign.center,
+                //   style: TextStyle(
+                //       fontWeight: FontWeight.bold,
+                //       fontSize: 14,
+                //       color: Color(0xFF090735)),
+                // ),
+                SvgPicture.asset(
+                  'assets/icons/no_signal.svg',
+                  allowDrawingOutsideViewBox: false,
+                  height: 120,
+                ),
+              ],
+            ),
           ),
         ),
         messageText: const Text(
             'There was an error connecting to the network. Please check your internet connection and try again. If the problem persists, please contact your network administrator for assistance.',
-            style: TextStyle(color: Colors.white, fontSize: 24)),
+            style: TextStyle(color: Colors.white, fontSize: 14)),
         isDismissible: false,
         duration: const Duration(days: 1),
         backgroundColor: Color.fromARGB(255, 230, 15, 8),
