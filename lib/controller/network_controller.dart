@@ -17,30 +17,24 @@ class NetworkController extends GetxController {
     if (connectivityResult == ConnectivityResult.none) {
       Get.rawSnackbar(
         snackPosition: SnackPosition.TOP,
-        titleText: FullScreenWidget(
-          disposeLevel: DisposeLevel.Low,
-          child: Expanded(
-            flex: 1,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                // Text(
-                //   ' Cannot connect to network.',
-                //   textAlign: TextAlign.center,
-                //   style: TextStyle(
-                //       fontWeight: FontWeight.bold,
-                //       fontSize: 14,
-                //       color: Color(0xFF090735)),
-                // ),
-                SvgPicture.asset(
-                  'assets/icons/no_signal.svg',
-                  allowDrawingOutsideViewBox: false,
-                  height: 120,
-                ),
-              ],
+        titleText: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // Text(
+            //   ' Cannot connect to network.',
+            //   textAlign: TextAlign.center,
+            //   style: TextStyle(
+            //       fontWeight: FontWeight.bold,
+            //       fontSize: 14,
+            //       color: Color(0xFF090735)),
+            // ),
+            SvgPicture.asset(
+              'assets/icons/no_signal.svg',
+              allowDrawingOutsideViewBox: false,
+              height: MediaQuery.of(context).size.height,
             ),
-          ),
+          ],
         ),
         messageText: const Text(
             'There was an error connecting to the network. Please check your internet connection and try again. If the problem persists, please contact your network administrator for assistance.',
