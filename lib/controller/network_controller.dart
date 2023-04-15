@@ -36,6 +36,7 @@ class NetworkController extends GetxController {
     } else {
       if (Get.isSnackbarOpen) {
         Get.closeCurrentSnackbar();
+        
       }
     }
   }
