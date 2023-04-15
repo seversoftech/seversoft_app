@@ -20,12 +20,11 @@ class NetworkController extends GetxController {
           'assets/icons/no_signal.svg',
           allowDrawingOutsideViewBox: false,
         ),
-        messageText: const Text(
-            'There was an error connecting to the network. Please check your internet connection and try again. If the problem persists, please contact your network administrator for assistance.',
+        messageText: const Text('There was an error connecting to the network.',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromARGB(255, 3, 19, 109),
-                fontSize: 14,
+                fontSize: 24,
                 fontWeight: FontWeight.bold)),
         isDismissible: false,
         duration: const Duration(days: 1),
@@ -36,7 +35,6 @@ class NetworkController extends GetxController {
     } else {
       if (Get.isSnackbarOpen) {
         Get.closeCurrentSnackbar();
-        
       }
     }
   }
