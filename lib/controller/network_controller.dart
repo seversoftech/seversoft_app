@@ -18,7 +18,7 @@ class NetworkController extends GetxController {
       Get.rawSnackbar(
         snackPosition: SnackPosition.TOP,
         titleText: Column(
-          mainAxisSize: MainAxisSize.max,
+          mainAxisSize: MainAxisSize.min,
           children: [
             // Text(
             //   ' Cannot connect to network.',
