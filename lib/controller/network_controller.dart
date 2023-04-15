@@ -18,16 +18,15 @@ class NetworkController extends GetxController {
     if (connectivityResult == ConnectivityResult.none) {
       Get.rawSnackbar(
         snackPosition: SnackPosition.TOP,
-        titleText: Expanded(
-          flex: 1,
-          child: Column(
-            children: [
-              ErrorImg(),
-              RetryButton(
-                onPressed: () {},
-              )
-            ],
-          ),
+        titleText: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            ErrorImg(),
+            // RetryButton(
+            //   onPressed: () {},
+            // )
+          ],
         ),
         messageText: Text('Message'),
         isDismissible: false,
@@ -52,7 +51,7 @@ class ErrorImg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      height: MediaQuery.of(context).size.height,
+      height: 200,
       'assets/icons/no_signal.svg',
       // allowDrawingOutsideViewBox: false,
     );
@@ -81,17 +80,22 @@ class RetryButton extends StatelessWidget {
         Text(
           "Network Error",
           style: TextStyle(
-              fontSize: 24, fontWeight: FontWeight.w300, color: primaryColor),
+              fontSize: 18, fontWeight: FontWeight.w300, color: primaryColor),
         ),
         Icon(Icons.refresh, color: primaryColor)
       ]),
       style: ButtonStyle(
-          side: MaterialStateProperty.all(
-              BorderSide(color: primaryColor, width: 1.3)),
-          padding: MaterialStateProperty.all(
-              EdgeInsets.symmetric(vertical: 20, horizontal: 50)),
-          shape: MaterialStateProperty.all(RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(borderRadius))))),
+        side: MaterialStateProperty.all(
+            BorderSide(color: primaryColor, width: 1.3)),
+        padding: MaterialStateProperty.all(EdgeInsets.all(10)),
+        shape: MaterialStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(borderRadius),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
