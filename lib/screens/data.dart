@@ -64,6 +64,7 @@ class DataState extends State<Data> {
                 setState(
                   () {
                     _loadHtmlFromAssets();
+                    
                   },
                 );
               },

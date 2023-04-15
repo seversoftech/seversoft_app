@@ -14,6 +14,7 @@ class NetworkController extends GetxController {
 
   void _updateConnectionStatus(ConnectivityResult connectivityResult) {
     if (connectivityResult == ConnectivityResult.none) {
+      
       Get.rawSnackbar(
         snackPosition: SnackPosition.TOP,
         titleText: SvgPicture.asset(
