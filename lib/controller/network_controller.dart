@@ -32,7 +32,7 @@ class NetworkController extends GetxController {
             SvgPicture.asset(
               'assets/icons/no_signal.svg',
               allowDrawingOutsideViewBox: false,
-              height: MediaQuery.of(context).size.height,
+              // height: MediaQuery.of(context).size.height,
             ),
           ],
         ),
