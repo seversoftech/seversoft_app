@@ -2,6 +2,8 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:seversoftapp/navbar.dart';
+import '../screens/hompage.dart';
 
 class NetworkController extends GetxController {
   final Connectivity _connectivity = Connectivity();
@@ -14,20 +16,20 @@ class NetworkController extends GetxController {
 
   void _updateConnectionStatus(ConnectivityResult connectivityResult) {
     if (connectivityResult == ConnectivityResult.none) {
-      
       Get.rawSnackbar(
         snackPosition: SnackPosition.TOP,
-        titleText: SvgPicture.asset(
-          'assets/icons/no_signal.svg',
-          // allowDrawingOutsideViewBox: false,
+        titleText: Expanded(
+          flex: 1,
+          child: Column(
+            children: [
+              ErrorImg(),
+              RetryButton(
+                onPressed: () {},
+              )
+            ],
+          ),
         ),
-        messageText: const Text(
-            'There was an error connecting to the network.\n Please check your internet connection and try again.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Color.fromARGB(255, 3, 19, 109),
-                fontSize: 18,
-                fontWeight: FontWeight.bold)),
+        messageText: Text('Message'),
         isDismissible: false,
         duration: const Duration(days: 1),
         backgroundColor: Colors.white,
@@ -39,5 +41,57 @@ class NetworkController extends GetxController {
         Get.closeCurrentSnackbar();
       }
     }
+  }
+}
+
+class ErrorImg extends StatelessWidget {
+  const ErrorImg({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SvgPicture.asset(
+      height: MediaQuery.of(context).size.height,
+      'assets/icons/no_signal.svg',
+      // allowDrawingOutsideViewBox: false,
+    );
+  }
+}
+
+class RetryButton extends StatelessWidget {
+  final Function() onPressed;
+
+  const RetryButton({required this.onPressed, Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    const primaryColor = Color.fromARGB(255, 3, 19, 109);
+
+    const double borderRadius = 40;
+
+    return OutlinedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => NavBarHome()),
+        );
+      },
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        Text(
+          "Network Error",
+          style: TextStyle(
+              fontSize: 24, fontWeight: FontWeight.w300, color: primaryColor),
+        ),
+        Icon(Icons.refresh, color: primaryColor)
+      ]),
+      style: ButtonStyle(
+          side: MaterialStateProperty.all(
+              BorderSide(color: primaryColor, width: 1.3)),
+          padding: MaterialStateProperty.all(
+              EdgeInsets.symmetric(vertical: 20, horizontal: 50)),
+          shape: MaterialStateProperty.all(RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(borderRadius))))),
+    );
   }
 }
