@@ -18,13 +18,14 @@ class NetworkController extends GetxController {
         snackPosition: SnackPosition.TOP,
         titleText: SvgPicture.asset(
           'assets/icons/no_signal.svg',
-          allowDrawingOutsideViewBox: false,
+          // allowDrawingOutsideViewBox: false,
         ),
-        messageText: const Text('There was an error connecting to the network.',
+        messageText: const Text(
+            'There was an error connecting to the network.\n Please check your internet connection and try again.',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromARGB(255, 3, 19, 109),
-                fontSize: 24,
+                fontSize: 18,
                 fontWeight: FontWeight.bold)),
         isDismissible: false,
         duration: const Duration(days: 1),
