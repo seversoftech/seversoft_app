@@ -17,8 +17,8 @@ class NetworkController extends GetxController {
     if (connectivityResult == ConnectivityResult.none) {
       Get.rawSnackbar(
         snackPosition: SnackPosition.TOP,
-        titleText: ErrorImg(),
-        messageText: Text('Message'),
+        titleText: Text('Faild to connect to internet'),
+        messageText: Text('There is error in network communication.'),
         isDismissible: false,
         duration: const Duration(days: 1),
         backgroundColor: Colors.white,
@@ -32,30 +32,3 @@ class NetworkController extends GetxController {
     }
   }
 }
-
-class ErrorImg extends StatelessWidget {
-  const ErrorImg({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        height: double.infinity,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-          image: ExactAssetImage('assets/images/icon.png'),
-          fit: BoxFit.contain,
-        )
-
-            // child: SvgPicture.asset(
-
-            //   height: 200,
-            //   'assets/icons/no_signal.svg',
-            //   // allowDrawingOutsideViewBox: false,
-            // ),
-            ));
-  }
-}
-
-
