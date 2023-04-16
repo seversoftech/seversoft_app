@@ -120,7 +120,7 @@ class _NavBarHomeState extends State<NavBarHome> {
                 _pageController.animateToPage(
                   index,
                   duration: const Duration(milliseconds: 500),
-                  curve: Curves.bounceInOut,
+                  curve: Curves.easeIn,
                 );
               },
             )
