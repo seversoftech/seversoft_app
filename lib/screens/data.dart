@@ -11,7 +11,7 @@ class Data extends StatefulWidget {
 }
 
 class DataState extends State<Data> {
-  late WebViewController? _controller;
+   WebViewController? _controller;
   double progress = 0;
 
   final Completer<WebViewController> _controllerCompleter =

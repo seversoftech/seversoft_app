@@ -1,6 +1,5 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:seversoftapp/navbar.dart';
 import '../screens/hompage.dart';
@@ -51,16 +50,20 @@ class ErrorImg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        height: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/icon.png'), fit: BoxFit.cover))
-        // child: SvgPicture.asset(
+          image: ExactAssetImage('assets/images/icon.png'),
+          fit: BoxFit.contain,
+        )
 
-        //   height: 200,
-        //   'assets/icons/no_signal.svg',
-        //   // allowDrawingOutsideViewBox: false,
-        // ),
-        );
+            // child: SvgPicture.asset(
+
+            //   height: 200,
+            //   'assets/icons/no_signal.svg',
+            //   // allowDrawingOutsideViewBox: false,
+            // ),
+            ));
   }
 }
 

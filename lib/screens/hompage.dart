@@ -11,7 +11,7 @@ class Hompage extends StatefulWidget {
 }
 
 class HompageState extends State<Hompage> {
-  late WebViewController _controller;
+   WebViewController? _controller;
   double progress = 0;
 
   final Completer<WebViewController> _controllerCompleter =
@@ -31,7 +31,7 @@ class HompageState extends State<Hompage> {
         extendBodyBehindAppBar: false,
         body: RefreshIndicator(
             onRefresh: () {
-              return (_controller.reload());
+              return (_controller!.reload());
             },
             child: willMethod(context)),
       ),
@@ -76,8 +76,8 @@ class HompageState extends State<Hompage> {
 
 //GO BACK IN WEBVIEW
   Future<bool> _goBack(BuildContext context) async {
-    if (await _controller.canGoBack()) {
-      _controller.goBack();
+    if (await _controller!.canGoBack()) {
+      _controller!.goBack();
       return Future.value(false);
     } else {
       showDialog(
@@ -106,7 +106,7 @@ class HompageState extends State<Hompage> {
 // LOAD ERROR HTML PAGE
   _loadHtmlFromAssets() async {
     String fileText = await rootBundle.loadString('assets/error.html');
-    _controller.loadUrl(Uri.dataFromString(
+    _controller!.loadUrl(Uri.dataFromString(
       fileText,
       mimeType: 'text/html',
       encoding: Encoding.getByName('utf-8'),
