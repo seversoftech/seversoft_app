@@ -12,7 +12,7 @@ class Airtime extends StatefulWidget {
 
 class AirtimeState extends State<Airtime> {
    late WebViewController _controller;
-  double progress = 0;
+   double progress = 0;
 
   final Completer<WebViewController> _controllerCompleter =
       Completer<WebViewController>();

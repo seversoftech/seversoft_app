@@ -1,8 +1,7 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:seversoftapp/navbar.dart';
-import '../screens/hompage.dart';
 
 class NetworkController extends GetxController {
   final Connectivity _connectivity = Connectivity();
@@ -17,13 +16,16 @@ class NetworkController extends GetxController {
     if (connectivityResult == ConnectivityResult.none) {
       Get.rawSnackbar(
         snackPosition: SnackPosition.TOP,
-        titleText: Text('Faild to connect to internet'),
-        messageText: Text('There is error in network communication.'),
+        messageText: Text('There is an Error in Network Communication.',
+            style: TextStyle(
+                letterSpacing: 1.5, fontWeight: FontWeight.bold, fontSize: 18),
+            textAlign: TextAlign.center),
+        titleText: SvgPicture.asset('assets/icons/no_signal.svg'),
         isDismissible: false,
-        duration: const Duration(days: 1),
+        duration: const Duration(days: 7),
         backgroundColor: Colors.white,
         margin: EdgeInsets.zero,
-        snackStyle: SnackStyle.FLOATING,
+        snackStyle: SnackStyle.GROUNDED,
       );
     } else {
       if (Get.isSnackbarOpen) {

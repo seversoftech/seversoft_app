@@ -238,14 +238,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.3"
-  flutter_svg_provider:
-    dependency: "direct main"
-    description:
-      name: flutter_svg_provider
-      sha256: cbb2d02fd9feb70fc30221fc36a7ee5347f1cceae6b0c99ab4fa011bbd9f1f7f
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -264,22 +256,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.6.5"
-  http:
-    dependency: transitive
-    description:
-      name: http
-      sha256: "6aa2946395183537c8b880962d935877325d6a09a2867c3970c05c0fed6ac482"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.13.5"
-  http_parser:
-    dependency: transitive
-    description:
-      name: http_parser
-      sha256: "2aa08ce0341cc9b354a498388e30986515406668dbcc4f7c950c3e715496693b"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.0.2"
   image:
     dependency: transitive
     description:

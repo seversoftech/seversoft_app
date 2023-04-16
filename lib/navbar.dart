@@ -18,7 +18,6 @@ class _NavBarHomeState extends State<NavBarHome> {
   final _pageController = PageController(initialPage: 2);
 
   int maxCount = 5;
-  bool _mounted = false;
 
   // widget list
   final List<Widget> bottomBarPages = [
@@ -32,12 +31,10 @@ class _NavBarHomeState extends State<NavBarHome> {
   @override
   void initState() {
     super.initState();
-    _mounted = true;
   }
 
   @override
   void dispose() {
-    _mounted = false;
     _pageController.dispose();
     super.dispose();
   }
