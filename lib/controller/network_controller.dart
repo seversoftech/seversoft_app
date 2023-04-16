@@ -53,9 +53,7 @@ class ErrorImg extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(
-                    'https://images.unsplash.com/photo-1547665979-bb809517610d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80'),
-                fit: BoxFit.cover))
+                image: AssetImage('assets/images/icog.png'), fit: BoxFit.cover))
         // child: SvgPicture.asset(
 
         //   height: 200,
