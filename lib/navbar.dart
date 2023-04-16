@@ -37,7 +37,7 @@ class _NavBarHomeState extends State<NavBarHome> {
 
   @override
   void dispose() {
-  mounted = false;
+    mounted = false;
     _pageController.dispose();
     super.dispose();
   }
