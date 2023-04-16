@@ -17,16 +17,7 @@ class NetworkController extends GetxController {
     if (connectivityResult == ConnectivityResult.none) {
       Get.rawSnackbar(
         snackPosition: SnackPosition.TOP,
-        titleText: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            ErrorImg(),
-            // RetryButton(
-            //   onPressed: () {},
-            // )
-          ],
-        ),
+        titleText: ErrorImg(),
         messageText: Text('Message'),
         isDismissible: false,
         duration: const Duration(days: 1),
@@ -67,44 +58,4 @@ class ErrorImg extends StatelessWidget {
   }
 }
 
-class RetryButton extends StatelessWidget {
-  final Function() onPressed;
 
-  const RetryButton({required this.onPressed, Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    const primaryColor = Color.fromARGB(255, 3, 19, 109);
-
-    const double borderRadius = 40;
-
-    return OutlinedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => NavBarHome()),
-        );
-      },
-      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        Text(
-          "Network Error",
-          style: TextStyle(
-              fontSize: 18, fontWeight: FontWeight.w300, color: primaryColor),
-        ),
-        Icon(Icons.refresh, color: primaryColor)
-      ]),
-      style: ButtonStyle(
-        side: MaterialStateProperty.all(
-            BorderSide(color: primaryColor, width: 1.3)),
-        padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-        shape: MaterialStateProperty.all(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(borderRadius),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
