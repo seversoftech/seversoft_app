@@ -79,8 +79,6 @@ class _NavBarHomeState extends State<NavBarHome> {
                   ),
                   itemLabel: 'Airtime',
                 ),
-
-                ///svg example
                 BottomBarItem(
                   inActiveItem: SvgPicture.asset(
                     'assets/icons/home.svg',
