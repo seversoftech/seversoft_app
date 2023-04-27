@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDMxOasU_IejlMbWuaA62Kh9_p4U-PFElI',
-    appId: '1:799071269662:android:e99bb1273ab17f82b68f0f',
-    messagingSenderId: '799071269662',
-    projectId: 'seversoft-app',
-    storageBucket: 'seversoft-app.appspot.com',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    storageBucket: '',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCAMQowDw8F6X3z7JfRtTyKQzs4eodtpOU',
-    appId: '1:799071269662:ios:e4a77f6fa45a9a6eb68f0f',
-    messagingSenderId: '799071269662',
-    projectId: 'seversoft-app',
-    storageBucket: 'seversoft-app.appspot.com',
-    iosClientId: '799071269662-f1q2iul90umko71vu0f8vbucrkp2bmuj.apps.googleusercontent.com',
-    iosBundleId: 'com.seversoft.app',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    storageBucket: ''
+    iosClientId: '',
+    iosBundleId: '',
   );
 }
